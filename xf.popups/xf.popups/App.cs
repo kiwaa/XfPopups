@@ -12,34 +12,22 @@ namespace xf.popups
         public App()
         {
             // The root page of your application
+            var showpopup = new Button()
+            {
+                Text = "Show Popup"
+            };
+            showpopup.Clicked += (sender, args) => MainPage.DisplayPopup(new PopupSample());
+
             MainPage = new ContentPage
             {
                 Content = new StackLayout
                 {
                     VerticalOptions = LayoutOptions.Center,
                     Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
+                        showpopup
                     }
                 }
             };
-        }
-
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
         }
     }
 }

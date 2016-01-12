@@ -78,11 +78,10 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="PopupContainer.cs" />
-    <Compile Include="PopupDialogWrapper.cs" />
+    <Compile Include="PopupDialogAdapter.cs" />
     <Compile Include="PopupManagement.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

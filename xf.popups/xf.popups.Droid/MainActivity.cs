@@ -1,10 +1,5 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace xf.popups.Droid
@@ -16,6 +11,7 @@ namespace xf.popups.Droid
         {
             base.OnCreate(bundle);
 
+            PopupManagement.Instance.Initialize();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }

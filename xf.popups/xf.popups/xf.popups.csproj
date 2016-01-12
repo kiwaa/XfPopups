@@ -36,12 +36,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="BasePage.cs" />
+    <Compile Include="PageExtension.cs" />
     <Compile Include="IPopup.cs" />
     <Compile Include="Messages.cs" />
+    <Compile Include="Popup.cs" />
     <Compile Include="PopupArguments.cs" />
     <Compile Include="PopupBase.cs" />
-    <Compile Include="PopupViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

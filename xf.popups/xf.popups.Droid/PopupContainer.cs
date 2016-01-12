@@ -12,19 +12,11 @@ namespace xf.popups.Droid
           : base(context)
         {
             _child = RendererFactory.GetRenderer(view);
-            SetPlatform(view);
-            var viewGroup = _child.ViewGroup;
             _child.Tracker.UpdateLayout();
 
-            AddView(viewGroup);
+            AddView(_child.ViewGroup);
         }
-
-        private void SetPlatform(View view)
-        {
-            var platform = App.Current.MainPage.GetPlatform();
-            view.SetPlatform(platform);
-        }
-
+        
         protected override void OnLayout(bool changed, int l, int t, int r, int b)
         {
             var width = Context.FromPixels(r - l);

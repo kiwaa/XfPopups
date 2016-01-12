@@ -2,11 +2,11 @@ using Android.App;
 
 namespace xf.popups.Droid
 {
-    class PopupDialogWrapper : IPopup
+    class PopupDialogAdapter : IPopup
     {
         private Dialog _dialog;
 
-        public PopupDialogWrapper(Dialog dialog)
+        public PopupDialogAdapter(Dialog dialog)
         {
             _dialog = dialog;
         }
