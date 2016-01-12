@@ -11,7 +11,7 @@ namespace xf.popups.Droid
         {
             base.OnCreate(bundle);
 
-            PopupManagement.Instance.Initialize();
+            XfPopups.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }

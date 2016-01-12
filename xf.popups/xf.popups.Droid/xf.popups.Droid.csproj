@@ -79,7 +79,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="PopupContainer.cs" />
     <Compile Include="PopupDialogAdapter.cs" />
-    <Compile Include="PopupManagement.cs" />
+    <Compile Include="XfPopups.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

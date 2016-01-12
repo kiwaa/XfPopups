@@ -37,12 +37,13 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="PageExtension.cs" />
-    <Compile Include="IPopup.cs" />
-    <Compile Include="Messages.cs" />
-    <Compile Include="Popup.cs" />
-    <Compile Include="PopupArguments.cs" />
-    <Compile Include="PopupBase.cs" />
+    <Compile Include="XfPopups\IPopup.cs" />
+    <Compile Include="XfPopups\Messages.cs" />
+    <Compile Include="XfPopups\Popup.cs" />
+    <Compile Include="XfPopups\PopupArguments.cs" />
+    <Compile Include="XfPopups\PopupBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XfPopups\XfPopups.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">

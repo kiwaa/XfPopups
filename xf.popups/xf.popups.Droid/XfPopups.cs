@@ -1,26 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
 using Android.Graphics.Drawables;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using Xamarin.Forms;
 
 namespace xf.popups.Droid
 {
-    class PopupManagement
+    class XfPopups
     {
-        public static PopupManagement Instance = new PopupManagement();
+        private static XfPopups Instance = new XfPopups();
 
-        public void Initialize()
+        public static void Init()
         {
-            MessagingCenter.Subscribe<Page, PopupArguments>(this, Messages.DisplayPopupMessage, Show);
+            MessagingCenter.Subscribe<Page, PopupArguments>(Instance, Messages.DisplayPopupMessage, Instance.Show);
         }
 
         private void Show(Page page, PopupArguments args)

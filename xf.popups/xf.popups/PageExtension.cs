@@ -12,9 +12,7 @@ namespace xf.popups
             {
                 throw new ArgumentNullException("popup");
             }
-            var popupArguments = new PopupArguments(popup);
-            MessagingCenter.Send(page, Messages.DisplayPopupMessage, popupArguments);
-            return popupArguments.Result.Task;
+            return XfPopups.ShowPopup(page, popup);
         }
     }
 }
