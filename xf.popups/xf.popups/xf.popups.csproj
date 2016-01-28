@@ -37,7 +37,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="PageExtension.cs" />
-    <Compile Include="XfPopups\IPopup.cs" />
     <Compile Include="XfPopups\Messages.cs" />
     <Compile Include="XfPopups\Popup.cs" />
     <Compile Include="XfPopups\PopupArguments.cs" />
@@ -56,7 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

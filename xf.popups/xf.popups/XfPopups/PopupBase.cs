@@ -1,15 +1,21 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace xf.popups
 {
-    public abstract class PopupBase : ContentView, IPopup
+    public abstract class PopupBase : ContentView
     {
-        public IPopup Container { get; set; }
-        
+        public event EventHandler CloseRequest = delegate { };
+
         public void Close()
         {
-            Container?.Close();
             Parent = null;
+            RaiseCloseRequest();
+        }
+
+        private void RaiseCloseRequest()
+        {
+            CloseRequest(this, EventArgs.Empty);
         }
     }
 }

@@ -11,13 +11,11 @@ namespace xf.popups
     {
         public App()
         {
-            // The root page of your application
             var showpopup = new Button()
             {
                 Text = "Show Popup"
             };
             showpopup.Clicked += (sender, args) => MainPage.DisplayPopup(new PopupSample());
-
             MainPage = new ContentPage
             {
                 Content = new StackLayout
