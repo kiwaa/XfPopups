@@ -6,34 +6,21 @@ using Xamarin.Forms.Platform.iOS;
 
 namespace xf.popups.iOS
 {
-    public class PopupManagement
+    internal class XfPopups
     {
-        public static PopupManagement Instance = new PopupManagement();
+		private static XfPopups Instance = new XfPopups();
 
-        public void Initialize()
-        {
-            MessagingCenter.Subscribe<Page, PopupArguments>(this, popups.Messages.DisplayPopupMessage, Show);
-        }
+		public static void Init()
+		{
+			MessagingCenter.Subscribe<Page, PopupArguments>(Instance, Messages.DisplayPopupMessage, Instance.Show);
+		}
 
         public void Show(Page page, PopupArguments args)
         {
-            var popup = args.Popup;
+			args.Popup.Parent = page;
 
-            var app = UIApplication.SharedApplication.Windows.Last();
-            var renderer = RendererFactory.GetRenderer(popup);
-
-            var dialogView = new PopupContainer(renderer);
-            dialogView.AddSubview(renderer.NativeView);
-
-            var wrapper = new PopupDialogWrapper(dialogView);
-            popup.Container = wrapper;
-
-            var bounds = new CGRect(0, 0, app.Bounds.Width, app.Bounds.Height);
-            renderer.Element.Layout(bounds.ToRectangle());
-            renderer.NativeView.SetNeedsLayout();
-
-            dialogView.Frame = bounds;
-            app.AddSubview(dialogView);
+			var container = new PopupDialogContainer(args);
+			container.Show();
         }
     }
 }

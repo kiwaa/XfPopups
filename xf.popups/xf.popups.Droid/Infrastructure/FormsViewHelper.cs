@@ -5,6 +5,8 @@ namespace xf.popups.Droid.Infrastructure
 {
     internal static class FormsViewHelper
     {
+		// Code taken from 
+		// http://www.michaelridland.com/xamarin/creating-native-view-xamarin-forms-viewpage/
         public static ViewGroup ConvertFormsToNative(Xamarin.Forms.View view, Xamarin.Forms.Rectangle size)
         {
             var renderer = Platform.CreateRenderer(view);
