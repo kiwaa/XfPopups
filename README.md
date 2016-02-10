@@ -2,7 +2,9 @@
 Custom popups in Xamarin.Forms example
 
 This is an example of how to use Xamarin.Forms Renderers to show custom popup dialogs on each platform. 
-Example how to use it:
+Details in the blogpost: http://gooingdeep.blogspot.ru/2016/02/custom-popup-dialog-in-xamarinforms.html
+
+How to use it:
 
 	// create popup
 	public class PopupSample : PopupBase
